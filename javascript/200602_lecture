@@ -42,3 +42,94 @@ let criminal;
 console.log(criminal);
 
 //null은 우리가 없다고 고의적으로 설정하는 값, undefined 우리가 값을 설정하지 않았기떄문에 없는 값을 의미
+
+// 3, 연산자
+
+// 산술연산자  - 사칙연산과 같은 작업을 하는 연산자를 의마
+//let a  = 1 + 2 ;
+//let a = 1 + 2 - ( 3* 4)/4;
+//let a = 1;
+//a++; // ++ 가 앞에 오는거 뒤에오는거에 따라 차이가 있음,
+//++a;
+//console.log(a++); //1을 더하기 전에 직전 값을 보여줌.
+//console.log(++a); // 1을 더한 다음의 값을 보여줌.]
+
+//a--;
+//console.log(a);
+
+// 대입연산자 -  특정 값에 연산을 한 값을 바로 설정 할 떄 사용할 수 있는 연산자.
+
+//a = a + 3;
+//a += 3; //	왼쪽의 피연산자에 오른쪽의 피연산자를 더한 후, 왼쪽의 피연산자에 대입함.
+//a -= 3;
+//a *= 3;
+//a /= 3;
+
+// 논리연산자 - 불리언 타입(true or false) . if 문을 사용할 때 매우 유용
+// ! :  NOT
+// NOT 연산자는 true는 false로, false는 true 로 바꿔줌.
+//const not = !true;
+//console.log(not); // not는 false로 찍힘.
+
+// && : AND
+// 양쪽의 값이 둘 다 true 일때만 결과값이 나타남.
+
+//const a = true && true;
+
+// 전부 false 상황
+// let f = false && false;
+// f = false && true;
+// f= true && false;
+
+// || : OR
+// 양쪽의 값이 중 하나라도 true라면 결과물이 true 임. 두 값이 둘 다 false일 때에만 false임.
+// let t = true || false;
+// t = false || true;
+// t = true || true ; // 전부 t값은 true
+// t = false || false; // 값이 false;
+
+//    논리연산자고 순서사 있음. NOT -> AND -> OR 순
+const value = !((true && false) || (true && false) || !false);
+// 1)   괄호로 감싸져 있기떄문에 not이 먼저지만 괄호 안에부터
+// 2)   not 을 먼저 처리
+//!((true && false) || (true && false) || true);
+// 3)   AND 처리
+//!( false || false || true);
+// 4) OR 을 처리
+//!true; = false 결과값은 false 임.
+console.log(value);
+
+// 비교연산자 - 두 값을 비교 할 때 사용
+
+// const b = 1;
+// const c = 1;
+//const equals = b === c;
+//const equals = b == c;  숫자 1과 문자 '1'이 동일 한 값으로 간주
+
+// console.log(equals);
+
+//  두 값이 일치하는지 확인 => !== 사용 (타입 검사 0)
+//const val = 'a' !== 'b'; //true
+console.log(1 != '1'); // false  타입검사 없이
+console.log(1 !== '1'); // true
+
+// 크고 작음 -  두 값 중에서 무엇이 더 크고 작은지 비교하기 위해
+
+const d = 10;
+const e = 15;
+const f = 15;
+
+console.log(d < e); // true
+console.log (e > d); // true
+console.log (e >= f); // true
+console.log (d <= f ); //true
+console.log ( e < f); // false
+
+// 문자열 붙이기  -  두 문자열을 붙일ㄹ 때는 ' + ' 사용
+
+const g = '안녕';
+const h ='히세요.';
+console.log(g + h); //안녕하세요.
+
+
+
