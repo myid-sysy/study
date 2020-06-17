@@ -29,9 +29,6 @@ const num = 666;
 //Float  floating number(떠돌이 소숫점)을 가지고 있음.
 const dot = 55.5;
 
-
-
-
 //Array 데이터를 저장하는 곳, 리스트 형태로 저장 여러 String들은 하나로 묶는거
 const monday = "Mon";
 const tue  = "Tue";
@@ -45,3 +42,27 @@ const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 54, true, "
 console.log(daysOfWeek);
 
 // Array 3번째 요일을 알고 싶다 => console.log(daysOfWeek[2]); 
+
+//Object 실제 객체를 만드는거 lable을 내가 저장하고 싶은 data 줄 수 있음.
+// array 
+
+// const nicoInfo = ["Nicolas", "55", true, "Seoul"];
+const nicoInfo ={
+    name:"Nico",
+    age:33,
+    gender:"Male",
+    isHandsome:false,
+    favMovies: ["oldboy","Along the gods","LOTR"],
+    favFood: [{name:"Kimchi", fatty:false}, {name:"cheese burger", fatty:true}]
+}
+
+console.log(nicoInfo);
+
+/*
+console.log(nicoInfo.gender); //gender값만 받음. 즉 데이터의 이름만 사용
+
+
+nicoInfo.gender = "Female";
+console.log(nicoInfo.gender);
+결과값이 male/ female이 나옴. const안에 있는 값(gender)을 바꿀 수 있음..?
+*/
