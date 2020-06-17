@@ -42,7 +42,6 @@ const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 54, true, "
 console.log(daysOfWeek);
 
 // Array 3번째 요일을 알고 싶다 => console.log(daysOfWeek[2]); 
-<<<<<<< HEAD
 
 //Object 실제 객체를 만드는거 lable을 내가 저장하고 싶은 data 줄 수 있음.
 // array 
@@ -67,5 +66,3 @@ nicoInfo.gender = "Female";
 console.log(nicoInfo.gender);
 결과값이 male/ female이 나옴. const안에 있는 값(gender)을 바꿀 수 있음..?
 */
-=======
->>>>>>> 2c2caa8d9ecfb7995348fa903bab646461c2ac19
