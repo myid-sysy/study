@@ -1,12 +1,12 @@
 // alert('Im Working. Im JS. Im Beautiful. Im Worth it')
 //console.log('Im Working. Im JS. Im Beautiful. Im Worth it')
 
-/*
+
 const a = 221; //a를 생성하고, 숫자 221로 초기화.
 let b = a - 5;
 a = 4;
 console.log(b ,a);
-*/
+
  //  모든 expressions는 한 둘에 있어야 됨. 그리고 끝나는 곳을 선언하는 방법 ';'세미콜론 을 사용
  //  1) Create 생성 
  //  2) Initialize 초기화 필요할 때는 생성과 초기화를 동시에 함
@@ -42,6 +42,7 @@ const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 54, true, "
 console.log(daysOfWeek);
 
 // Array 3번째 요일을 알고 싶다 => console.log(daysOfWeek[2]); 
+<<<<<<< HEAD
 
 //Object 실제 객체를 만드는거 lable을 내가 저장하고 싶은 data 줄 수 있음.
 // array 
@@ -66,3 +67,5 @@ nicoInfo.gender = "Female";
 console.log(nicoInfo.gender);
 결과값이 male/ female이 나옴. const안에 있는 값(gender)을 바꿀 수 있음..?
 */
+=======
+>>>>>>> 2c2caa8d9ecfb7995348fa903bab646461c2ac19
