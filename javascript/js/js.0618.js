@@ -28,10 +28,10 @@ console object 안에 있는 함수라는 뜻
 
 
 // JS DOM Function
-const title = document.getElementById("title");
-title.innerHTML= "Hi! From JS";
-title.style.color = "white";
-document.title = "I own you now";
+// const title = document.getElementById("title");
+// title.innerHTML= "Hi! From JS";
+// title.style.color = "white";
+// document.title = "I own you now";
 
 
 // const selector = document.querySelector("#title"); //css 선택자와 비슷함.
@@ -50,13 +50,13 @@ JS는 HTML있는 모든 요소를 가져오고 그리고 그걸 객체로(object
 Events and event handlers
 */
 
-const selector = document.querySelector("#title");
+// const selector = document.querySelector("#title");
 
-function handleClick(){
-    // console.log(" I have been resized");
-    title.style.color = "red";
-}
-title.addEventListener("click", handleClick); //윈도우 사이즈가 변화될 떄 handleResize 함수를 호출하자~!
+// function handleClick(){
+//     // console.log(" I have been resized");
+//     title.style.color = "red";
+// }
+// title.addEventListener("click", handleClick); //윈도우 사이즈가 변화될 떄 handleResize 함수를 호출하자~!
 
 
 // window.addEventListener("resize", handleResize) -> 필요한 시점에서 함수를  호출하는거 
@@ -123,3 +123,49 @@ if (age >= 18 && age <= 21){
 }
 
 console.log(age);
+
+
+// 연습1
+/*
+const title = document.querySelector("#title");
+const BASE_COLOR = "rgb(69, 69, 69)";
+const OTHER_COLOR = "#ffffff";
+
+function handleClick() { 
+    const currentColor = title.style.color;
+    // console.log(currentColor);
+    if (currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    } else {
+        title.style.color = BASE_COLOR;
+    }
+}
+
+function init(){ //어플리케이션을 초기화
+    title.style.color = BASE_COLOR;
+    title.addEventListener("click", handleClick); //click을 하면 handleClick()함수를 호출
+
+}
+
+init(); //호출
+*/
+
+// 연습2
+
+const title = document.querySelector("#title");
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    // const hasClass = title.classList.contains(CLICKED_CLASS); //value값이 존재 하는지 체크
+    // if(hasClass){  // hasClass가 CLICKED_CLASS를 가지고 있는지 체크 
+    //     title.classList.remove(CLICKED_CLASS);
+    // } else {
+    //     title.classList.add(CLICKED_CLASS);
+    // }
+    title.classList.toggle(CLICKED_CLASS);
+}
+
+function init(){ //어플리케이션을 초기화
+    title.addEventListener("click", handleClick); //click을 하면 handleClick()함수를 호출
+}
+init();
