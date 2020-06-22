@@ -23,4 +23,4 @@ function init() {
 }
 init();
 
-// setInterval(fn ,1000); 두 인자(argument)을 받는데 첫번쨰 인자로는 실행할 함수를 받고, 그 함수를 실행하고 싶은 시간
+// setInterval(fn ,1000); 두 인자(argument)을 받는데 첫번쨰 인자로는 실행할 함수를 받고, 그 함수를 실행하고 싶은 시간 입력.
