@@ -48,3 +48,71 @@ Result
  console object 안에 있는 함수라는 뜻
 ("넣고 싶은 것을 두개 따옴표 안에 넣으면 함수는 그걸 이용함.")
 - 인자(argument) -> 변수 같은 거 우리가 주는 값은 저장함. 함수 우리가 주는 argument를 가지고 갈 수 있게? sayHello를 준비시켜야 됨.  
+
+## JS DOM Function
+
+ - DOM : Document Object Module 
+ - HTML을 이 DOM 객체(object)로 바꿔서 자바스크립트로 활용할 수 있음, HTML로 style을 수정 할 수 있지만 권장하지 않음.
+ 
+ ```  
+ const title = document.getElementById("title"); 
+ title.innerHTML= "Hi! From JS";
+ title.style.color = "white";
+ document.title = "I own you now";
+ ```
+   
+getElementById => id값으로 특정한 값을 가진 요소를 가져오는거.
+ 
+```  
+const selector = document.querySelector("#title"); //css 선택자와 비슷함.
+title.innerHTML= "Hi! From JS";
+title.style.color = "red";
+document.title = "I own you now";
+console.dir(document);
+```   
+querySelector("#title"); => CSS 선택자로 선택 주의할 점은 선택자에 해당하는 첫번째 요소만 선택한다는 점.
+
+
+## Events and event handlers
+
+```   
+const selector = document.querySelector("#title"); //id= "title" 값을 선택
+
+function handleClick(){
+      console.log(" I have been resized");
+      title.style.color = "red";
+ }
+title.addEventListener("click", handleClick); //click handleResize 함수를 호출하는게 addEventListener?
+```   
+
+addEventListener => 이벤트가 발생했을 때 그 처리를 담당하는 함수. 지정된 타입의 이벤트가 특정요소에 발생하면, 웹 브라우져는 그 요소에 해당하는 이벤트 리스너를 실행시킴.
+
+- window.addEventListener("resize", handleResize) -> 필요한 시점에서 함수를  호출하는거 
+- window.addEventListener("resize", handleResize()) -> 지금 당장 함수를 호출하는거
+
+## If else / AND / OR
+
+#### if-else 
+``` 
+if(condition조건){ // 조건은 항상 true
+    block  //true
+} else {
+    block //false
+}
+``` 
+
+#### AND = &&
+- true &&  true = true;
+- true && false =false;
+- false && true = false;
+- false && false = false;
+- 둘 중 하나라도 거짓이만 false
+
+
+#### OR= ||
+- true ||  true = true;
+- true || false = true;
+- false ||  true = true;
+- false ||  false = false;
+- 하나 혹은 나머지 것을 뜻함.
+
