@@ -116,3 +116,55 @@ if(condition조건){ // 조건은 항상 true
 - false ||  false = false;
 - 하나 혹은 나머지 것을 뜻함.
 
+6/22
+## clock part
+<div>
+  <img width="653" alt="스크린샷 2020-06-22 오후 9 53 46" src="https://user-images.githubusercontent.com/60874174/85296212-03561780-b4dc-11ea-8064-ed82dd909ced.png">
+</div>
+ console창을 이용하여 현재 시간 확인.
+ 
+    function getTime(){
+      const date = new Date();
+      const minutes = date.getMinutes();
+      const hours = date.getHours();
+      const seconds = date.getSeconds();
+      clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${
+          seconds < 10 ? `0${seconds}` : seconds
+      }`;
+    }
+  - innerText : JS로 HTML을 다룰 때 DOM요소내의 내용을 조작. 일반적으로 택트를 엘리먼트에 추가할 경우 사용. 또한 사용자에게 보이는 텍스트 값만 가져온다.
+  - innerHTML : innerText와 동일하게 사용된다. 차이점은 HTML 구조까지 모두 복사한다. 
+  - 참고) https://hi098123.tistory.com/83
+  
+  - 삼항연산자 (ternary operator) 혹은 작은 if -> if문의 단축 형태. 하나의 문자열로 작성 가능
+  
+        조건문 ? 선택문1 : 선택문2;
+        
+   예시 ) 
+   
+        ${hours < 10 ? `0${hours}` : hours} 
+        // 만약 hours가 10보다 작으면(?) hours 앞에 '0'을 붙이고 or(:) 아니면 hours 그대로 보여줘라.
+
+- setInterval : 일정 시간마다 반복 실행하는 함수 
+
+      setInterval(fn ,1000);
+      
+   두 인자(argument)을 받는데 첫번쨰 인자로는 실행할 함수를 받고, 그 함수를 실행하고 싶은 시간 입력.
+   예시 ) getTime() 함수로 현재 시간은 받고, setInterval로 1초마다 갱신
+
+      function init() {
+          getTime();
+          setInterval(getTime,1000);
+      }
+      init();
+  
+  
+ 
+ 
+  
+  
+    
+  
+ 
+  
+ 
